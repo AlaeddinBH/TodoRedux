@@ -1,1 +1,33 @@
-redux : state management library ==> 
+redux : state management library of javaScript(angular,react,vue,vanilla) ==> organize state and store in a single source
+==> all state is stored in a store , and every component can access data
+
+
+component ===> action ===> reducer ===> store
+  data <==============================
+
+
+  example : Bank
+  customer : component
+  withdraw money(200dt) : action
+  Banker : reducer: accepts the action, modifies the store
+  store (500dt) ==> 300dt
+
+
+  action : object ==> two keys : type,payload
+  ex:
+  const withdraw_money = {
+      type:"WITHDRAW_MONEY",
+      payload:(optional)
+  }
+
+
+  reducer : function ===> state,action : parameters
+  const reducer = (state,{type,payload}) => {
+      switchcase
+  }
+
+
+  store : createStore(reducer)
+
+
+  exercice : make a simple counter using redux +/-
