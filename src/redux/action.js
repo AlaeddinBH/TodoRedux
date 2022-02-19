@@ -2,7 +2,7 @@
 //     type: "INCREMENT_COUNTER"
 // }; 
 
-import { ADD_TASK, COMPLETE_TASK, DECREMENT, DELETE_TASK, EDIT_TASK, INCREMENT } from "./actionTypes"
+import { SET_FILTER, ADD_TASK, COMPLETE_TASK, DECREMENT, DELETE_TASK, EDIT_TASK, INCREMENT } from "./actionTypes"
 
 // export const decrementCounter = {
 //     type: "DECREMENT_COUNTER"
@@ -51,3 +51,8 @@ export const add = (addTask) => {
         payload: addTask
     }
 }
+
+export const setFilter = filter => ({
+    type: SET_FILTER,
+    payload: { filter }
+  });

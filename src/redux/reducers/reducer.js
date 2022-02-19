@@ -1,10 +1,10 @@
-import { ADD_TASK, COMPLETE_TASK, DECREMENT, DELETE_TASK, EDIT_TASK, INCREMENT } from "./actionTypes";
-import makeid from './id.js'
+import { ADD_TASK, COMPLETE_TASK, DECREMENT, DELETE_TASK, EDIT_TASK, INCREMENT } from "../actionTypes";
+import makeid from '../id.js'
 const initialState = {
     counter: 0,
     tasks:[
         {id:makeid(10),action:'learn react',isDone:true},
-        {id:makeid(100),action:'learn redux',isDone:false}
+        {id:makeid(10),action:'learn redux',isDone:false}
     ]
 };
 
@@ -32,6 +32,8 @@ function Reducer(state = initialState,action){
             return {
                 ...state,tasks:[...state.tasks,action.payload]
             }
+        
+        
 
         default: return state;
         }
